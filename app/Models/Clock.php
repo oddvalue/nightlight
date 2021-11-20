@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Clock extends Model
+{
+    protected $casts = [
+        'sunrise_at' => 'datetime',
+    ];
+}
