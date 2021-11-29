@@ -21,13 +21,7 @@ jobs:
     - run: npm ci
     - run: npm run prod
     - run: rm -rf node_modules
-      
-  deploy:
-    runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
     - name: Copy repository contents via scp
       uses: appleboy/scp-action@master
       env:
@@ -48,5 +42,5 @@ jobs:
         KEY: ${{ secrets.SSHKEY }}
         script: |
           cd /var/www/nightlight
-          composer install --no-dev --optimize
+          composer install --no-dev --optimize-autoloader
           php artisan migrate --force
