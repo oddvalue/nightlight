@@ -36,6 +36,7 @@
             <!-- Page Content -->
             <main>
                 {{ $slot }}
+                <a href='https://www.freepik.com/vectors/sun' class="fixed bottom-0 right-0 text-black-10">Sun vector created by freepik - www.freepik.com</a>
             </main>
         </div>
 
@@ -43,5 +44,7 @@
 
         @livewireScripts
         @stack('scripts')
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+        <x-livewire-alert::scripts />
     </body>
 </html>
