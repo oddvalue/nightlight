@@ -22403,8 +22403,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)({
+    'w-full h-screen flex justify-center items-center bg-black': true
+  })
+};
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "https://www.freepik.com/vectors/sun",
   "class": "fixed bottom-0 right-0 text-black"
 }, "Sun vector created by freepik - www.freepik.com", -1
@@ -22416,27 +22421,43 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_v_sleeping_sun = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("v-sleeping-sun");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)({
-      'w-full h-screen flex justify-center items-center': true,
-      'bg-gradient-radial from-yellow-500 via-red-900 to-blue-900': $data.sunIsUp
+      'w-full h-screen absolute opacity-0 transition-opacity duration-1000 delay-0 bg-center bg-no-repeat bg-gradient-radial from-yellow-50 via-yellow-900 to-black': true,
+      'opacity-70 delay-700': $data.sunIsUp
     })
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  }, null, 2
+  /* CLASS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)({
-      'w-full max-w-2xl p-6 cursor-pointer': true
+      'w-full max-w-2xl p-6 cursor-pointer relative z-10': true
     }),
     onClick: _cache[0] || (_cache[0] = function () {
       return $options.toggle && $options.toggle.apply($options, arguments);
     })
-  }, [$data.sunIsUp ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_v_sun, {
-    key: 0,
-    "class": "w-full"
-  })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_v_sleeping_sun, {
-    key: 1,
-    "class": "w-full opacity-20"
-  })), _hoisted_1])], 2
-  /* CLASS */
-  );
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(vue__WEBPACK_IMPORTED_MODULE_0__.Transition, {
+    mode: "out-in",
+    duration: "1000",
+    "enter-active-class": "transition-all transform duration-1000",
+    "enter-class": "opacity-0 translate-y-full ",
+    "enter-to-class": "opacity-100 translate-x-0",
+    "leave-active-class": "transition-all transform duration-1000",
+    "leave-class": "opacity-100 translate-x-0",
+    "leave-to-class": "opacity-0 translate-y-full"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [$data.sunIsUp ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_v_sun, {
+        key: 0,
+        "class": "w-full"
+      })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_v_sleeping_sun, {
+        key: 1,
+        "class": "w-full opacity-20"
+      }))];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), _hoisted_2])]);
 }
 
 /***/ }),
@@ -22455,9 +22476,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "{{": "",
-  $attributes: "",
-  "}}": "",
   viewBox: "0 0 104 104",
   version: "1.1",
   id: "svg8883",
@@ -22488,9 +22506,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "{{": "",
-  $attributes: "",
-  "}}": "",
   viewBox: "0 0 104 104",
   version: "1.1",
   id: "svg8883",
@@ -22534,7 +22549,7 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_1__.createApp)({}); // registers our C
 
 app.component('v-clock', _components_Clock_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
 app.component('v-sun', _components_Sun_vue__WEBPACK_IMPORTED_MODULE_4__["default"]);
-app.component('v-sun-sleeping', _components_SleepingSun_vue__WEBPACK_IMPORTED_MODULE_5__["default"]); // mount the app to the DOM
+app.component('v-sleeping-sun', _components_SleepingSun_vue__WEBPACK_IMPORTED_MODULE_5__["default"]); // mount the app to the DOM
 
 app.mount('#app');
 

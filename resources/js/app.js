@@ -17,7 +17,7 @@ const app = createApp({});
 // registers our Clock component globally
 app.component('v-clock', Clock);
 app.component('v-sun', Sun);
-app.component('v-sun-sleeping', SunSleeping);
+app.component('v-sleeping-sun', SunSleeping);
 
 // mount the app to the DOM
 app.mount('#app');

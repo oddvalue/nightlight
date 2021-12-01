@@ -1,5 +1,5 @@
 <template>
- <svg {{ $attributes }} viewBox="0 0 104 104" version="1.1" id="svg8883" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <svg viewBox="0 0 104 104" version="1.1" id="svg8883" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
   <defs id="defs8880">
     <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1119">
       <path d="M 435.322,756.764 H 594.41 V 708.012 H 435.322 Z" id="path1117"/>
